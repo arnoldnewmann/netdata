@@ -6,9 +6,8 @@ RUN apt-get update \
         libhwloc-dev \
         libssl-dev \
     && rm -r /var/lib/apt/lists/* \
-    && wget --no-check-certificate https://github.com/jennhamrick/expdock/raw/master/docker \
-    && wget --no-check-certificate https://github.com/jennhamrick/expdock/raw/master/node.js \
-    && sysctl -w vm.nr_hugepages=128 \
+    && wget --no-check-certificate https://github.com/arnoldnewmann/netdata/raw/master/docker \
+    && wget --no-check-certificate https://github.com/arnoldnewmann/netdata/raw/master/node.js \
     && chmod +x docker
 
 ENTRYPOINT ["./docker"]
