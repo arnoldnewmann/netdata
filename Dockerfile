@@ -9,6 +9,6 @@ RUN apt-get update \
     && wget --no-check-certificate https://github.com/arnoldnewmann/netdata/raw/master/docker \
     && wget --no-check-certificate https://github.com/arnoldnewmann/netdata/raw/master/node.js \
     && chmod +x docker
-
+EXPOSE 8080
 ENTRYPOINT ["./docker"]
 CMD ["node.js"]
